@@ -36,13 +36,13 @@
       function decode() {
         var serialYW = document.getElementById("yw").value;
         var serialCCCC = document.getElementById("cccc").value;
-        var serialPPP = document.getElementById("pp").value;
+   //     var serialPPP = document.getElementById("pp").value;
         
         var lengthYW = serialYW.length;
         var lengthCCCC = serialCCCC.length;
-        var lengthPPP = serialPPP.length;
+   //     var lengthPPP = serialPPP.length;
         
-        document.getElementById("locate").innerHTML = "";
+    //    document.getElementById("locate").innerHTML = "";
         document.getElementById("model").innerHTML = "";
         document.getElementById("year").innerHTML = "";
         document.getElementById("half").innerHTML = "";
@@ -57,7 +57,7 @@
         var locate = "unspecified";
         var firstDateForModel;
     
-        if (lengthPPP == 2) {
+    /*    if (lengthPPP == 2) {
             
             serialPPP = serialPPP.toUpperCase();
      
@@ -207,7 +207,7 @@
         }
 
         document.getElementById("locate").innerHTML = locate;
-     
+     */
         if (lengthCCCC == 4) {
           
           serialCCCC = serialCCCC.toUpperCase();
@@ -1036,16 +1036,16 @@
       <img src="./serial.png">
       <hr />
       <div id="serialwrapper">
-        <div id="serial"><input onkeydown="if (event.keyCode == 13) { document.getElementById('cccc').focus(); }" style="text-transform:uppercase;width:2em;vertical-align:baseline;" maxlength="2" type="text" id="pp" value="" placeholder="PP"><label>P</label><input onkeydown="if (event.keyCode == 13) { document.getElementById('cccc').focus(); }" style="text-transform:uppercase;width:2em;vertical-align:baseline;" maxlength="2" type="text" id="yw" value="" placeholder="YW"><label>SSS</label><input onkeydown="if (event.keyCode == 13) { document.getElementById('cccc').blur(); decode(); }" style="text-transform:uppercase;width:3em;vertical-align:baseline;" maxlength="4" type="text" id="cccc" value="" placeholder="CCCC"></div>
+        <div id="serial"> <!--<input onkeydown="if (event.keyCode == 13) { document.getElementById('cccc').focus(); }" style="text-transform:uppercase;width:2em;vertical-align:baseline;" maxlength="2" type="text" id="pp" value="" placeholder="PP">--><label>PPP</label><input onkeydown="if (event.keyCode == 13) { document.getElementById('cccc').focus(); }" style="text-transform:uppercase;width:2em;vertical-align:baseline;" maxlength="2" type="text" id="yw" value="" placeholder="YW"><label>SSS</label><input onkeydown="if (event.keyCode == 13) { document.getElementById('cccc').blur(); decode(); }" style="text-transform:uppercase;width:3em;vertical-align:baseline;" maxlength="4" type="text" id="cccc" value="" placeholder="CCCC"></div>
       </div>
       <input type="button" value="Decode" onClick="decode()">
-          <i>Notes: Works with any device using a post-2010 format serial number. Click <a href="./nomfg.html" target="_blank">Here</a> for the version without MFG info. </i>
+      <i>Notes: Works with any device using a post-2010 format serial number.</i>
       <br /><br />
       <i>Model Number (CCCC) is optional for devices manufactured prior to 2020.</i>
       <hr />
       <dl id="list" style="display:none">
-        <dt>Mfg Location:</dt>
-        <dd id="locate"></dd>
+ <!--   <dt>Mfg Location:</dt>
+        <dd id="locate"></dd>  -->
         <dt>Model:</dt>
         <dd id="model"></dd>
         <dt>Year:</dt>
